@@ -1,0 +1,39 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import ProtectedRoute from './components/ProtectedRoute';
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import Movies from './pages/Movies';
+import Booking from './pages/Booking';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <div style={{ padding: '20px' }}>
+        <Routes>
+          <Route path="/" element={<Navigate to="/login" />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          } />
+          <Route path="/movies" element={
+            <ProtectedRoute>
+              <Movies />
+            </ProtectedRoute>
+          } />
+          <Route path="/book" element={
+            <ProtectedRoute>
+              <Booking />
+            </ProtectedRoute>
+          } />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
