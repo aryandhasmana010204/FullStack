@@ -7,7 +7,6 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import Movies from './pages/Movies';
 import Booking from './pages/Booking';
-
 function App() {
   return (
     <BrowserRouter>
