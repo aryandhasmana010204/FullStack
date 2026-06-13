@@ -31,3 +31,14 @@ A full-stack microservices application built with React, Spring Boot, and Spring
 - Configured routing rules to forward traffic seamlessly to the `auth` backend (e.g., `/auth/**`).
 - Implemented a `GlobalFilter` for centralized JWT validation at the gateway level.
 - Secured backend services by ensuring only requests with valid JWTs in the Authorization header are forwarded.
+
+### Day 5: Movie Catalog Service (MongoDB, APIs & Data Handling)
+- Created the Spring Boot `movie-catalog-service` microservice.
+- Integrated MongoDB using Spring Data MongoDB for document-based storage.
+- Designed flexible document schemas (`Movie`, `Review`).
+- Implemented core CRUD operations and search functionality by title.
+- Added pagination and sorting to the movie retrieval APIs.
+- Developed a comprehensive reviews and ratings aggregation system.
+- Included file upload capabilities to handle movie posters and images locally.
+- Standardized API responses across all endpoints using a custom wrapper.
+- Implemented global exception handling for robustness.

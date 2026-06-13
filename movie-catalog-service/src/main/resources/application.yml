@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: movie-catalog-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/cineverse
+server:
+  port: 8082
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
